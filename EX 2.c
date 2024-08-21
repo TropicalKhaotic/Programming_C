@@ -1,22 +1,29 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+#include<math.h>
     int main(){
 
-        double Num1;
-        double Num2;
-        double Num3;
+        double ponto_inicial;
+        double velocidade_inicial;
+        double altura_relativa_do_solo;
+        double angulo_lacamento;
+        double Cal1;
+        double Distancia_Maxima
+            /*  gravidade = 9.81; chão = 0*/
 
-    printf("Insira tres valores para calcular a media \n");
-        printf("Valor Num 1: \n");
-            scanf("%lf",&Num1);
-        printf("valor Num 2: \n");
-            scanf("%lf",&Num2);
-        printf("valor Num 3: \n");
-            scanf("%lf",&Num3);
-                double Soma = Num1 + Num2 + Num3;
-                double Media = Soma / 3;
-    printf("O valor da media equivalante a: %lf\n", Media );
+
+        scanf("%lf",&ponto_inicial);
+        scanf("%lf",&velocidade_inicial);
+        scanf("%lf",&altura_relativa_do_solo);
+        scanf("%lf",&angulo_lacamento);
+
+
+        /*Distancia = V0^2/G *sen20  */
+        Cal1 = pow(velocidade_inicial) * cos(angulo_lacamento);
+        Distancia_Maxima =
+        printf ("%lf", Cal1);
+
+
 
         return 0;
 }
