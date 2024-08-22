@@ -3,26 +3,20 @@
 #include<math.h>
     int main(){
 
-        double ponto_inicial;
+            //its necessary to see if the ralative height input has something to do with the calculate of distance//
         double velocidade_inicial;
-        double altura_relativa_do_solo;
         double angulo_lacamento;
-        double Cal1;
-        double Distancia_Maxima
-            /*  gravidade = 9.81; chão = 0*/
-
-
-        scanf("%lf",&ponto_inicial);
+            //  gravidade = 9.81;//
+        printf("Vamos calcular a distancia maxima de um lançamento\n");
+        printf("Insira o valor da velocidade inicial em m/s: \n");
         scanf("%lf",&velocidade_inicial);
-        scanf("%lf",&altura_relativa_do_solo);
+        printf("Insira o valor do angulo de lancamento: \n");
         scanf("%lf",&angulo_lacamento);
-
-
-        /*Distancia = V0^2/G *sen20  */
-        Cal1 = pow(velocidade_inicial) * cos(angulo_lacamento);
-        Distancia_Maxima =
-        printf ("%lf", Cal1);
-
+            //Distancia = (Vi^2/G) *sen 2*(angulo//
+        double theta = angulo_lacamento;
+        double cal1 = pow(angulo_lacamento, 2) * sin(theta* 2);
+        double Distancia_Maxima = cal1/ 9.81;
+        printf ("O valor da distancia maxima e: %lf\n", cal1);
 
 
         return 0;
