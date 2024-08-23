@@ -15,20 +15,30 @@
                 scanf("%d", &num2);
             printf("Number 3: \n");
                 scanf("%d", &num3);
-                num1 = ReferenceNumber;
-               calculo();
+                if (num1 + num2 >= num3 && num1 + num3 >= num2 && num3+ num2 >= num1){
+                        if (num2 == ReferenceNumber && num3 == ReferenceNumber){
+                                    printf("This is a Equilateral Triangle\n");
+                        } else if (ReferenceNumber == num2 || ReferenceNumber == num3 || num2 == num3){
+                                    printf("This is a Isosceles Triangle\n");
+                        } else printf("This is a Escaleno Triangle\n");
+                } else printf("This is not a Triangle");
 
-        return 0;
+
+              /*  switch (){
+                case ReferenceNumber > a+b:
+                    printf("This is not a triangle");
+                        break;
+                case a == b:
+                    printf("This is a isosceles");
+                        break;
+                case
+                }*/
+
+
+
+
+return 0;
 
 }
             //Fix errors with void or change it to the main code
 
-                    void calculo(){
-                             if (num2 == ReferenceNumber & num3 == ReferenceNumber){
-                                    printf("This is a Equilateral Triangle");
-                                    num2 = ReferenceNumber;
-                             } else if (num2 > ReferenceNumber){
-                                    num2 = ReferenceNumber;
-                             } else if (num3 > ReferenceNumber){
-                                    num3 = ReferenceNumber;
-                             }
