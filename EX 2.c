@@ -16,12 +16,12 @@
         printf("Number 3: \n");
         scanf("%d", &num3);
             if (num1 + num2 >= num3 && num1 + num3 >= num2 && num3+ num2 >= num1){
-            if (num2 == ReferenceNumber && num3 == ReferenceNumber){
-                printf("This is a Equilateral Triangle\n");
-                    } else if (ReferenceNumber == num2 || ReferenceNumber == num3 || num2 == num3){
-                        printf("This is a Isosceles Triangle\n");
-                        } else printf("This is a Escaleno Triangle\n");
-                } else printf("This is not a Triangle");
+                if (num2 == ReferenceNumber && num3 == ReferenceNumber){
+                    printf("This is a Equilateral Triangle\n");
+                } else if (ReferenceNumber == num2 || ReferenceNumber == num3 || num2 == num3){
+                    printf("This is a Isosceles Triangle\n");
+                } else printf("This is a Escaleno Triangle\n");
+            } else printf("This is not a Triangle");
 
 
 return 0;
