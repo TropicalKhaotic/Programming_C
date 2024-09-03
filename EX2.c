@@ -12,7 +12,7 @@
     printf("Multas Vago\n");
     printf("insert the speed limit of the avenue: ");
     scanf("%d", &insert_max_velocity);
-    printf("Now insert the car velocity: ");~
+    printf("Now insert the car velocity: ");
     scanf("%d", &car_velocity);
     if (car_velocity > insert_max_velocity){
         subtração = car_velocity - insert_max_velocity;
