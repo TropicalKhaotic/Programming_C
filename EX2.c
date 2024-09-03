@@ -5,19 +5,21 @@
 
     int main(){
     
-    int insert_number;
-    int dezenas;
-    int dezenas_proprias;
-    int unidades;
+    int insert_max_velocity;
+    int car_velocity;
+    int multa, subtração;
 
-
-        printf("Please Insert a Number between 0 - 99: ");
-        scanf("%d", &insert_number);
-        if (insert_number < 0 || insert_number > 99){
-                printf("Invalid number input, check if it is between 0 - 99 \n" );
+    printf("Multas Vago\n");
+    printf("insert the speed limit of the avenue: ");
+    scanf("%d", &insert_max_velocity);
+    printf("Now insert the car velocity: ");~
+    scanf("%d", &car_velocity);
+    if (car_velocity > insert_max_velocity){
+        subtração = car_velocity - insert_max_velocity;
+        multa = (subtração * 5);
+        printf("This fine has a value of: %d",  multa);
             
-        }else printf("%d", insert_number);
-
-
+    }else printf("It dosent have any fine");
+    
     return 0;
 }
