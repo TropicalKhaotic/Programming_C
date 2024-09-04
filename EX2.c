@@ -1,71 +1,59 @@
-#include<stdlib.h>
 #include<stdio.h>
+#include<stdlib.h>
 
+  int main(){
 
+    int input_number, parameter_h, parameter_d, parameter_u;
 
-    int main(){
+    int hundred, decimal, unit;
+    int cinco_real,dois_real,um_real;
+    int cinquenta_real,vinte_real,dez_real;
+
+    printf("Insert the number you want to know: \n");
+    scanf("%d", &input_number);
+
+    unit = (input_number / 1) % 10;
+    decimal = (input_number / 10) % 10;
+    hundred = (input_number / 100) % 10;
+
+    if (input_number > 999){
+      printf ("Invalid Number");
+      return 0;
+    } 
     
-    int month;
-    int year, leap_year;
-
-    printf("Choose a month between 1 - 12: ");
-    scanf("%d", &month);
-    printf("Insert an year: ");
-    scanf("%d", &year);
-
-    //To check if the month input is right
-    if (month < 1 || month > 12){
-        printf("Invalid month input try numbers between 1 - 12");
-        return 0;
-    }
-    //Use this to know if its a leap year
-    if (year % 4 == 0){
-        leap_year = 1;
-    } else leap_year = 0;
-
-    //switch statmento to show the user the date he choose
-    switch (month){
-        case 1:
-          printf("Year: %d, Month: March, Days: 31.", year);
-            break;
-        case 2:
-          if (leap_year == 1){
-                 printf("Year: %d, Month: January, Days: 29.", year);
-        }   if (leap_year == 0){
-                 printf("Year: %d, Month: January, Days: 28.", year);
-        }   break;
-        case 3:
-          printf("Year: %d, Month: March, Days: 31.", year);
-            break;
-        case 4:
-          printf("Year: %d, Month: April, Days: 30.", year);
-            break;
-        case 5:
-          printf("Year: %d, Month: May, Days: 31.", year);
-            break;
-        case 6:
-         printf("Year: %d, Month: June, Days: 30.", year);
-            break;
-        case 7:
-         printf("Year: %d, Month: July, Days: 31.", year);
-            break;
-        case 8:
-         printf("Year: %d, Month: August, Days: 31.", year);
-            break;
-        case 9:
-         printf("Year: %d, Month: September, Days: 30.", year);
-            break;
-        case 10:
-         printf("Year: %d, Month: October, Days: 31.", year);
-            break;
-        case 11:
-         printf("Year: %d, Month: November, Days: 30.", year);
-            break;
-        case 12:
-         printf("Year: %d, Month: Dezember, Days: 31.", year);
-            break;
+    if (unit != 0){
+       } if (unit >= 5){
+        cinco_real = unit / 5;
+        unit = unit % 5;
+       } if (unit != 0){
+          dois_real = unit / 2;
+          unit = unit % 2;
+       } if (unit == 1){
+            um_real = unit / 1;
+       }
+    
+    if (decimal > 0){
+       } if (decimal >= 5){
+        cinquenta_real = decimal / 5;
+        decimal = decimal % 5;
         
-       
-    }return 0;
+       } if (decimal != 0){
+          vinte_real = decimal / 2;
+          decimal = decimal % 2;
+       } if (decimal == 1){
+            dez_real = decimal / 1;
+       } else
+
+
+    printf("Values of bills: \n%d - cedula de 100.\n", hundred);    
+    printf("%d - cedula de 50.\n", cinquenta_real);    
+    printf("%d - cedula de 20.\n", vinte_real);
+    printf("%d - cedula de 10.\n", dez_real);
+    printf("%d - cedula de 5.\n", cinco_real);
+    printf("%d - cedula de 2.\n", dois_real);
+    printf("%d - cedula de 1.\n", um_real);
+
+
+
 
 }
