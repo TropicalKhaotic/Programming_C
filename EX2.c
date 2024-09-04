@@ -1,39 +1,38 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define BETWEEN(value, min, max) (value <= max && value >= min)
 
   int main(){
 
-    float hour_value, result, num_hour, extra_value;
+    int team_guess, team_one_score, team_two_score;
+    int game_winner, team_one_game_score, team_two_game_score;
+    int guess_comparison_one, guess;
 
-   printf("Salary Calculator \nPlease insert the number of hours worked: ");
-   scanf("%f", &num_hour);
-   printf("Insert the hour value: ");
-   scanf("%f", &hour_value);
+    printf("Insert your winner team guess: ");
+    scanf("%d", team_guess);
+    printf("Inser the score guess of each team");
+    printf("team one: ");
+    scanf("%d", team_one_score);
+    printf("team two: ");
+    scanf("%d", team_two_score);
+    printf("Now insert the game results");
+    //Game score
+    printf("Insert the winner: ");
+    scanf("%d", game_winner);
+    printf("Inser the score of each team");
+    printf("team one: ");
+    scanf("%d", team_one_game_score);
+    printf("team two: ");
+    scanf("%d", team_two_game_score);
 
-   // Calculator
+    
+    //Evaluating if the guess is correct
+    
 
-    if (num_hour <= 40){
-      result = num_hour * hour_value;
-      printf("The salary value is equivalant to: %.3f", result);
-      return 0;
-
-    } if (BETWEEN(num_hour,40,60)){
-      extra_value = (num_hour - 40) * 0.5;
-      result = (num_hour * hour_value) + extra_value;
-      printf("The salary value is equivalant to: %.3f", result);
-
-    } if (num_hour > 60){
-      extra_value = (num_hour - 40) * 1;
-      result = (num_hour * hour_value) + extra_value;
-      printf("The salary value is equivalant to: %.3f", result);
-      
-    }
     
     
 
 
 
-
+  return 0;
 
 }
