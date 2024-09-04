@@ -24,7 +24,7 @@
             results = num1 * num2;
         } else results = num1 / num2;
 
-        printf("%3.f", results);
+        printf("%.3f", results);
 
     return 0;
 }
