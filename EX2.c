@@ -40,7 +40,7 @@
 
     } else;
 
-    printf("%d", guess_score);
+    printf("The score your team gets from the guess game is: %d", guess_score);
    return 0;
 
 }
