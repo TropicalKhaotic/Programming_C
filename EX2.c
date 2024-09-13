@@ -14,14 +14,26 @@ Escreva um programa que receba como entrada a base de cálculo mensal de um trab
 retorne o imposto de renda devido. 
 */
     //Base de calculo mensal
+    printf("Insira o valor que deseja para o calculo de imposto de renda: \n");
     scanf("%f", &input);
     if (input <= month_base_value[0]){
         printf("Não existe nenhum imposto sobre este valor");
-    } if (BETWEEN(input,1637.11,2453.50)){
+        return 0;
+    } if (BETWEEN(input,month_base_value[0],month_base_value[1])){
             calculo = (input * 7.5) / 100;
-            printf("%2.f", calculo);
-
+            calculo = calculo - deduzir_do_imposto[0];
+    } if (BETWEEN(input,month_base_value[1],month_base_value[2])){
+            calculo = (input * 15) / 100;
+            calculo = calculo - deduzir_do_imposto[1];
+    } if (BETWEEN(input,month_base_value[2],month_base_value[3])){
+            calculo = (input * 22.5) / 100;
+            calculo = calculo - deduzir_do_imposto[2];
+    } if (input > month_base_value[3]){
+            calculo = (input * 27.5) / 100;
+            calculo = calculo - deduzir_do_imposto[3]; 
     }else
+
+     printf("O importo de renda que o usuario deve pagar é: %.2f", calculo);
    return 0;
 
 }
