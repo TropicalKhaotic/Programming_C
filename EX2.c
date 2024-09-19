@@ -3,19 +3,20 @@
 
 int main(){
 
-          int num1 = 1000;
-          int part_one = 0;
-          int part_two = 0;
-            while (num1 <= 9999){
-                part_one = num1 % 100;
-                part_two = num1 / 100;
-                if (num1 == (part_one + part_two) * (part_one + part_two)){
-                    printf("%d\n", num1);   
-                }
-                num1++;
-            }
+        int num1 = 0;
+        int Fibonacci = 0;
+        int count = 0;
 
+        while (count <= 15){
             
+            Fibonacci = (num1 - 1) + (num1 - 2);
+            if (Fibonacci <= 0){
+                printf("0\n");
+            } else printf("%d\n", Fibonacci);
+            count++;
+            num1++;
+        }
+        
 return 0;
 
 
