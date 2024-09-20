@@ -3,13 +3,14 @@
 #define BETWEEN(value, min, max) (value <= max && value >= min)
 
     //Use this to see if the student was approved or not
-
+    
     int main(){
     
     float grade1, grade2, grade3, average;
     float final_exam_grade;
     int final_exam;
 
+    //numbers input.
     printf ("Please insert the grade numbers (0 - 100): \n");
     printf ("First grade: \n");
     scanf ("%f", &grade1);
@@ -21,7 +22,6 @@
         printf ("Grade value invalid just numbers from 0 to 100\n");
         printf ("thanks for using our Software -__-\n");
         return 0;
-
     } else average = (grade1 + grade2) / 2;
 
     //Create to analize and print out the results if the grade is enough to pass or not. In case the student dont pass it will go to revaluation.
