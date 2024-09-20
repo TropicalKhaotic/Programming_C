@@ -7,7 +7,7 @@
         double velocidade_inicial;
         double angulo_lacamento;
             //  gravidade = 9.81;//
-        printf("Vamos calcular a distancia maxima de um lançamento\n");
+        printf("Vamos calcular a distancia maxima de um lanÃ§amento\n");
         printf("Insira o valor da velocidade inicial em m/s: \n");
         scanf("%lf",&velocidade_inicial);
         printf("Insira o valor do angulo de lancamento: \n");
