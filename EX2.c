@@ -17,4 +17,4 @@
     printf("Nome: %s\nTelefone: %d\nCEP: %d", Nome, Telefone, CEP);
 
     return 0;
-    }
+}
