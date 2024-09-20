@@ -65,7 +65,6 @@
          printf("Year: %d, Month: Dezember, Days: 31.", year);
             break;
         
-       
     }return 0;
 
 }
