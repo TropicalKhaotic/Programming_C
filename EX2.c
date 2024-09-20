@@ -3,32 +3,28 @@
 
 int main(){
 
-        int num1 = 1; 
-        int soma, calculo, divisor;
+
+        int number_input, resultado;
+        int divisor = 1, contador = 0;
         
-        while (num1 <= 100){
-            soma = 0;
-            divisor = 1;
+        printf("PLease insert a number: \n");
+        scanf("%d", &number_input);
+        
+        while (divisor <= number_input){
+            resultado = number_input % divisor;
+                if (resultado == 0){
+                    contador++;
 
-                while (divisor < num1){
+                } divisor++;
 
-                    calculo = num1 % divisor;
-                    
-                    if (calculo == 0){
-                        soma = soma + divisor;
-                    } divisor++;
-                }
-
-                if (soma == num1){
-                    printf ("%d\n", soma);
-                    }num1++;
-        }
                 
-        
+            } if (contador == 2){
+                printf("O numero %d é primo", number_input);
+                return 0;
+
+            } printf("O numero %d não é primo", number_input);
             
-        
             
-        
         
         
 return 0;
