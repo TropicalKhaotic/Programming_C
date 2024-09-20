@@ -10,21 +10,21 @@ int main(){
             soma = 0;
             divisor = 1;
 
-                while (divisor < num1 ){
+                while (divisor < num1){
 
                     calculo = num1 % divisor;
                     
                     if (calculo == 0){
-                        soma += divisor;
+                        soma = soma + divisor;
                     } divisor++;
                 }
 
                 if (soma == num1){
-                    printf ("%d", soma);
-                    }
-        } num1++;
-        
+                    printf ("%d\n", soma);
+                    }num1++;
+        }
                 
+        
             
         
             
