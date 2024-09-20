@@ -11,12 +11,12 @@
         scanf("%f", &num2);
         scanf("%f", &num3);
 
-       if (num1 > num2 && num1 > num3){
-            comparing_bigger = num1;
+        if (num1 > num2 && num1 > num3){
+        comparing_bigger = num1;
             if (num2 > num3){
-                comparing_middle = num2;
-                comparing_smaller = num3;
-                
+             comparing_middle = num2;
+             comparing_smaller = num3;
+
                 
             } if (num3 > num2){
                 comparing_middle = num3;
