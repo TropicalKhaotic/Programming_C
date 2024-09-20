@@ -13,12 +13,7 @@
    printf("xxxOxxxxxxxOxxx\n");
    printf("       xx       \n");
    printf("       xx       \n");
-   printf("      xxxx       \n");
+   printf("     xxxxxx       \n");
 
-
-
-
-
-
-        return 0;
+  return 0;
 }
