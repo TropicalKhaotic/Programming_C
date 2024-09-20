@@ -19,7 +19,7 @@
         multa = (subtração * 5);
         printf("This fine has a value of: %d",  multa);
             
-    }else printf("It dosent have any fine");
+    } else printf("It dosent have any fine");
     
     return 0;
 }
