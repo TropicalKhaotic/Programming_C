@@ -14,9 +14,10 @@ int main(){
             resultado = number_input % divisor;
                 if (resultado == 0){
                     contador++;
+                    
 
                 } divisor++;
-
+               
                 
             } if (contador == 2){
                 printf("O numero %d é primo", number_input);
