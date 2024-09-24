@@ -4,34 +4,24 @@
 int main(){
 
 
-        int number_input, resultado;
-        int divisor = 1, contador = 0;
-        
-        printf("PLease insert a number: \n");
-        scanf("%d", &number_input);
-        
-        while (divisor <= number_input){
-            resultado = number_input % divisor;
-                if (resultado == 0){
-                    contador++;
-                    
+    int num1,num2;
+    int contador;
+    int resultado;
 
-                } divisor++;
-               
-                
-            } if (contador == 2){
-                printf("O numero %d é primo", number_input);
-                return 0;
+    printf("Please insert a number to be calculated\nThe dividend number: \n");
+    scanf("%d", &num1);
+    printf("Insert Quotient number: \n");
+    scanf("%d", &num2);
+    resultado = num1;
 
-            } printf("O numero %d não é primo", number_input);
-            
-            
-        
+    while (resultado > 0 && resultado >= num2){
+        resultado = resultado - num2;
+        contador++;   
+    }
+    
+    printf("O quociente é: %d\n", contador);
+    printf("O resto da divisão é: %d\n", resultado);
         
 return 0;
-
-
-
-
 
 }
