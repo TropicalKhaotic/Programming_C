@@ -10,10 +10,8 @@ int main(){
     printf("Insert the dividend number: ");
     scanf("%d", &num2);
 
-    while (num2 != 0){
-        int b = num2;
-        num2 = num1 % num2;
-        num1 = b;          
+    while (num1 >= 1){
+                  
     }
 
     printf("Seu MDC é equivalante a: %d", num1);
