@@ -3,76 +3,28 @@
 
 int main(){
 
-    int num1, num2, rest1, rest2;
-    int multiplicação = 1;
-    int quocient[] = {2,3,5,7,11,13,17,19};
-    int num = 0;
+//Dada a afirmação: “A tem o dobro da idade que B tinha quando A tinha a idade que B tem.
+//Quando B tiver a idade de A, somarão 81 anos.”. Fazer um programa para calcular as idades
+//de A e B no método “força bruta” (tentativa e erro com todos os valores inteiros possíveis). 
 
-    printf("Insert the number: ");
-    scanf("%d", &num1);
-    printf("Insert the number: ");
-    scanf("%d", &num2);
+    int A,B,diferenca;
+    int soma;
 
-    while (num1 != 1 || num2 != 1){
+    while (soma <= 81){
+    A = 1;
 
-        rest1 = num1 % quocient[num];
-        rest2 = num2 % quocient[num];
+    B = A - (A-B);
+    A = 2*(2*B-A);
+    diferenca = A - B;
+    A = A + diferenca;
+    B = (A + B) - B;
+    soma = A + B;
+    A++;
 
-        if(rest1 == rest2 && rest1 == 0){
-
-            num1 = num1 / quocient[num];
-            num2 = num2 / quocient[num];
-            multiplicação = multiplicação * quocient[num];
-            num = 0;
-
-        } if (rest1 != 0 || rest2 != 0){
-
-            if (rest1 == 0){
-            num1 = num1 / quocient[num];
-            multiplicação = multiplicação * quocient[num];
-            num = 0;
-
-            } if (rest2 == 0){
-            num2 = num2 / quocient[num];
-            multiplicação = multiplicação * quocient[num];
-            num = 0;
-            }
+    } printf("%d", soma);
+     
+ 
 
 
-        } if (num1 == 1 || num2 == 1){
-
-            while (num1 != 1 || num2 != 1){
-                rest1 = num1 % quocient[num];
-                printf("%d\n", rest1);
-                rest2 = num2 % quocient[num];
-
-                if (num1 == 1){
-                    if (rest2 == 0){
-                    num2 = num2 / quocient[num];
-                    multiplicação = multiplicação * quocient[num];
-                    num = 0;
-                    }
-
-                } if (num2 == 1){
-                    if (rest1 == 0){
-                    num1 = num1 / quocient[num];
-                    multiplicação = multiplicação * quocient[num];
-                    num = 0;
-                    }
-
-                } 
-                num++;
-            }
-
-        } num++; 
-        
-    }
-    printf("%d", multiplicação);
-
-
-
-    
-    
 return 0;
 }
-
