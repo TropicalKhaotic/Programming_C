@@ -1,30 +1,33 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<time.h>
+#include<windows.h>
 
 int main(){
 
-//Dada a afirmação: “A tem o dobro da idade que B tinha quando A tinha a idade que B tem.
-//Quando B tiver a idade de A, somarão 81 anos.”. Fazer um programa para calcular as idades
-//de A e B no método “força bruta” (tentativa e erro com todos os valores inteiros possíveis). 
+    int click_input;
+   
+    printf("Teste de Velocidade de Resposta do Usuario: Digite o numero que aparecera apos um tempo aleatorio\n");
 
-    int A,B,diferenca;
-    int soma;
+    for (int quantidade = 1; quantidade < 5; quantidade++){
+    int random_sleeptime = rand () % 10000 + 1000;
+    int random_number = rand() % 1000 + 3;
+             
+    clock_t ti,tf;
+    srand(time(NULL));
+    Sleep(random_sleeptime);
+    printf("%d\n", random_number);
+    ti = clock();
+    scanf("%d", &click_input);
+    tf = clock() - ti;
 
-    while (soma <= 81){
-    A = 1;
+    if (click_input == random_number){
+        printf("O tempo de Resposta foi: %.4lf Segundos.\n\n", (double)tf / CLOCKS_PER_SEC);
+    } if (click_input != random_number){
+        printf("Você errou o numero :/\n\n");
+    }
+    
+    }
 
-    B = A - (A-B);
-    A = 2*(2*B-A);
-    diferenca = A - B;
-    A = A + diferenca;
-    B = (A + B) - B;
-    soma = A + B;
-    A++;
-
-    } printf("%d", soma);
-     
- 
-
-
-return 0;
+    return 0;
 }
