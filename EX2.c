@@ -1,48 +1,25 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
 
 int main(){
 
-   int domino_numbers = 28;
-   int contador = 1;
-   int four_number = 1;
-   int num = 0;
-   int calibration = 0;
-  
+    int num_input = 0;
+    int sum = 0;
+    int results = 0;
+    int count = 0;
 
-    while (num < domino_numbers) {
-        num += contador;
-        
-            
-        if (contador == 5) {
-            four_number = four_number + contador;
-            
-            four_number++;
-            
-            }
+    for ( num_input; num_input >= 0; count++) {
+        scanf("%d", &num_input);
 
-        if (contador > 5) {
-          while (calibration + num < domino_numbers) {
-                calibration = calibration;
-                calibration++;
-
-                
-            } 
-
-            if ( calibration > contador ) {
-                while ( calibration > 5) {
-                    four_number++;
-                    calibration = calibration - contador;
-                    contador++;
-                }
-            }
+        if (num_input > 0){
+        sum = sum + num_input;
         }
-           
-    contador++;
 
-    }
+    } count--;
     
-    printf("%d\n", four_number);
+    results = sum / count;
+    printf("%d", results);
+
+
     return 0;
 }
