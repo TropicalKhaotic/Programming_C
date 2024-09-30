@@ -11,7 +11,7 @@ int main(){
    int calibration = 0;
   
 
-    while (num < domino_numbers){
+    while (num < domino_numbers) {
         num += contador;
         
             
@@ -23,7 +23,7 @@ int main(){
             }
 
         if (contador > 5) {
-          while (calibration + num < domino_numbers){
+          while (calibration + num < domino_numbers) {
                 calibration = calibration;
                 calibration++;
 
@@ -31,7 +31,7 @@ int main(){
             } 
 
             if ( calibration > contador ) {
-                while ( calibration > 5){
+                while ( calibration > 5) {
                     four_number++;
                     calibration = calibration - contador;
                     contador++;
@@ -39,13 +39,10 @@ int main(){
             }
         }
            
-
     contador++;
 
     }
-
+    
     printf("%d\n", four_number);
- 
-
-   return 0;
+    return 0;
 }
