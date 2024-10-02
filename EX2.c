@@ -3,7 +3,7 @@
 
 int main(){
 
-    int num_input = 1000;
+    int num_input = 100;
     int num_comparison = 1100;
     int num_1 = 0;
     int num_2 = 0;
@@ -38,7 +38,7 @@ int main(){
                     }
                 } 
             }
-        } //else printf("O numero de comparacao e maior o outro numero, impossivel realizar se a uma sequencia");
+        } else printf("O numero de comparacao e maior o outro numero, impossivel realizar se a uma sequencia");
     }
     if ( num_input >= 100 && num_input <= 999 ) {
         // Use this if you want to implement user input.
@@ -59,15 +59,18 @@ int main(){
                     
                 }
             }    
-        } //else printf("O numero de comparacao e maior que o outro numero, impossivel realizar se a uma sequencia");
+        } else printf("O numero de comparacao e maior que o outro numero, impossivel realizar se a uma sequencia");
     } 
     if ( num_input >= 0 && num_input <=99 ) {
-        if ( num_input == num_comparison ) {
-            printf("Eles possuem uma sequencia com os numeros: %d\n", num_input);
-        } 
-        if ( num_input != num_comparison ) {
-            printf("Eles não possuem uma sequencia com os numeros");
-        }
+        if (num_comparison >= 100 && num_comparison <= 999) {
+            if ( num_input == num_comparison ) {
+                printf("Eles possuem uma sequencia com os numeros: %d\n", num_input);
+            } 
+            if ( num_input != num_comparison ) {
+                printf("Eles não possuem uma sequencia com os numeros");
+            }
+        } else printf("O numero de comparacao e maior o outro numero, impossivel realizar se a uma sequencia");
+        
     }
         
     return 0;
