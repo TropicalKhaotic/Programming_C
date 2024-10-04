@@ -9,9 +9,9 @@ int main(){
 
     unsigned int num_input = 7845;
     unsigned int num_comparison = 10000;
-    int num_comp_input [4];
-    int num_comp_compa [4];
-    int calculation [4]; 
+    int num_comp_input[4];
+    int num_comp_compa[4];
+    int calculation[4]; 
 
     // Use this to know if the number is a permutação of another.
     bool test = true;
@@ -48,7 +48,7 @@ int main(){
             calculation[2] = ( num_input % 100) / 10;
             calculation[3] = ( num_input % 100) % 10;
             for ( int count = 0; count <= 3; count++){
-                num_comp_input [count] = calculation [count];
+                num_comp_input[count] = calculation[count];
             }
             break;
 
@@ -57,7 +57,7 @@ int main(){
             calculation[2] = ( num_input % 100) / 10;
             calculation[3] = ( num_input % 100) % 10;
             for ( int count = 0; count <= 3; count++){
-                num_comp_input [count] = calculation [count];
+                num_comp_input[count] = calculation[count];
                 if ( count < 1) {
                     num_comp_input [count] = 0;
                 }
@@ -68,7 +68,7 @@ int main(){
             calculation[2] = num_input / 10;
             calculation[3] = num_input % 10;
             for ( int count = 0; count <= 3; count++){
-                num_comp_input [count] = calculation [count];
+                num_comp_input[count] = calculation[count];
                 if ( count <= 1) {
                     num_comp_input [count] = 0;
                 }
@@ -84,7 +84,7 @@ int main(){
             calculation[2] = ( num_comparison % 100) / 10;
             calculation[3] = ( num_comparison % 100) % 10;
             for ( int count = 0; count <= 3; count++) {
-                num_comp_compa [count] = calculation [count];
+                num_comp_compa[count] = calculation[count];
             }
             break;
         
@@ -93,7 +93,7 @@ int main(){
             calculation[2] = ( num_comparison % 100) / 10;
             calculation[3] = ( num_comparison % 100) % 10;
             for ( int count = 0; count <= 3; count++) {
-                num_comp_compa [count] = calculation [count];
+                num_comp_compa[count] = calculation[count];
                 if ( count < 1) {
                     num_comp_compa [count] = 0;
                 }
@@ -104,20 +104,19 @@ int main(){
             calculation[2] = num_comparison / 10;
             calculation[3] = num_comparison % 10;
             for ( int count = 0; count <= 3; count++) {
-                num_comp_compa [count] = calculation [count];
+                num_comp_compa[count] = calculation[count];
                 if ( count <= 1) {
                     num_comp_compa [count] = 0;
                 }
-                
             }
             break;
     }
     
     for (int count = 0; count <= 3; count++) {
         num_comp_input [count];
-        if (num_comp_input [count] == num_comp_compa [0] || num_comp_input [count] == num_comp_compa [1] || num_comp_input [count] == num_comp_compa [2] || num_comp_input [count] == num_comp_compa [3] ) {
+        if (num_comp_input[count] == num_comp_compa[0] || num_comp_input[count] == num_comp_compa[1] || num_comp_input[count] == num_comp_compa[2] || num_comp_input[count] == num_comp_compa[3] ) {
         }
-        if (num_comp_input [count] != num_comp_compa [0] && num_comp_input [count] != num_comp_compa [1] && num_comp_input [count] != num_comp_compa [2] && num_comp_input [count] != num_comp_compa [3] ) {
+        if (num_comp_input[count] != num_comp_compa[0] && num_comp_input[count] != num_comp_compa[1] && num_comp_input[count] != num_comp_compa[2] && num_comp_input[count] != num_comp_compa[3] ) {
             test = false;
         }
     }
