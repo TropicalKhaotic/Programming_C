@@ -42,75 +42,75 @@ int main(){
     }
     // Use this to separate the num input into an array.
     switch (test_input) {
-    case 1:
-        calculation[0] = ( num_input / 100) / 10;
-        calculation[1] = ( num_input / 100) % 10;
-        calculation[2] = ( num_input % 100) / 10;
-        calculation[3] = ( num_input % 100) % 10;
-        for ( int count = 0; count <= 3; count++){
-            num_comp_input [count] = calculation [count];
-        }
-        break;
-
-    case 2:
-        calculation[1] = num_input / 100;
-        calculation[2] = ( num_input % 100) / 10;
-        calculation[3] = ( num_input % 100) % 10;
-        for ( int count = 0; count <= 3; count++){
-            num_comp_input [count] = calculation [count];
-            if ( count < 1) {
-                num_comp_input [count] = 0;
+        case 1:
+            calculation[0] = ( num_input / 100) / 10;
+            calculation[1] = ( num_input / 100) % 10;
+            calculation[2] = ( num_input % 100) / 10;
+            calculation[3] = ( num_input % 100) % 10;
+            for ( int count = 0; count <= 3; count++){
+                num_comp_input [count] = calculation [count];
             }
-        }
-        break;
+            break;
 
-    case 3: 
-        calculation[2] = num_input / 10;
-        calculation[3] = num_input % 10;
-        for ( int count = 0; count <= 3; count++){
-            num_comp_input [count] = calculation [count];
-            if ( count <= 1) {
-                num_comp_input [count] = 0;
+        case 2:
+            calculation[1] = num_input / 100;
+            calculation[2] = ( num_input % 100) / 10;
+            calculation[3] = ( num_input % 100) % 10;
+            for ( int count = 0; count <= 3; count++){
+                num_comp_input [count] = calculation [count];
+                if ( count < 1) {
+                    num_comp_input [count] = 0;
+                }
             }
-        }
-        break;
+            break;
+
+        case 3: 
+            calculation[2] = num_input / 10;
+            calculation[3] = num_input % 10;
+            for ( int count = 0; count <= 3; count++){
+                num_comp_input [count] = calculation [count];
+                if ( count <= 1) {
+                    num_comp_input [count] = 0;
+                }
+            }
+            break;
 
     }
     // Use this to separate the num comparison into an array.
     switch (test_comparison) {
-    case 1:
-        calculation[0] = ( num_comparison / 100) / 10;
-        calculation[1] = ( num_comparison / 100) % 10;
-        calculation[2] = ( num_comparison % 100) / 10;
-        calculation[3] = ( num_comparison % 100) % 10;
-        for ( int count = 0; count <= 3; count++) {
-            num_comp_compa [count] = calculation [count];
-        }
-        break;
-    
-    case 2:
-        calculation[1] = num_comparison / 100;
-        calculation[2] = ( num_comparison % 100) / 10;
-        calculation[3] = ( num_comparison % 100) % 10;
-        for ( int count = 0; count <= 3; count++) {
-            num_comp_compa [count] = calculation [count];
-             if ( count < 1) {
-                num_comp_compa [count] = 0;
+        case 1:
+            calculation[0] = ( num_comparison / 100) / 10;
+            calculation[1] = ( num_comparison / 100) % 10;
+            calculation[2] = ( num_comparison % 100) / 10;
+            calculation[3] = ( num_comparison % 100) % 10;
+            for ( int count = 0; count <= 3; count++) {
+                num_comp_compa [count] = calculation [count];
             }
-        }
-        break;
+            break;
+        
+        case 2:
+            calculation[1] = num_comparison / 100;
+            calculation[2] = ( num_comparison % 100) / 10;
+            calculation[3] = ( num_comparison % 100) % 10;
+            for ( int count = 0; count <= 3; count++) {
+                num_comp_compa [count] = calculation [count];
+                if ( count < 1) {
+                    num_comp_compa [count] = 0;
+                }
+            }
+            break;
 
-    case 3:
-        calculation[2] = num_comparison / 10;
-        calculation[3] = num_comparison % 10;
-        for ( int count = 0; count <= 3; count++) {
-            num_comp_compa [count] = calculation [count];
-            if ( count <= 1) {
-                num_comp_compa [count] = 0;
+        case 3:
+            calculation[2] = num_comparison / 10;
+            calculation[3] = num_comparison % 10;
+            for ( int count = 0; count <= 3; count++) {
+                num_comp_compa [count] = calculation [count];
+                if ( count <= 1) {
+                    num_comp_compa [count] = 0;
+                }
+                
             }
-            
-        }
-        break;
+            break;
     }
     
     for (int count = 0; count <= 3; count++) {
