@@ -37,7 +37,7 @@ int main(){
         test_comparison = 3;
     }
     if ( num_comparison > 9999 || num_input > 9999) {
-        printf("Não e possivel realizar a conta de permutação com este numero.");
+        printf("Não é possivel realizar a conta de permutação com este numero.");
         return 0;
     }
     // Use this to separate the num input into an array.
