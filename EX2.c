@@ -62,7 +62,6 @@ int main(){
                 num_comp_input [count] = 0;
             }
         }
-
         break;
 
     case 3: 
@@ -74,7 +73,6 @@ int main(){
                 num_comp_input [count] = 0;
             }
         }
-
         break;
 
     }
@@ -88,7 +86,6 @@ int main(){
         for ( int count = 0; count <= 3; count++) {
             num_comp_compa [count] = calculation [count];
         }
-
         break;
     
     case 2:
@@ -101,7 +98,6 @@ int main(){
                 num_comp_compa [count] = 0;
             }
         }
-
         break;
 
     case 3:
@@ -114,7 +110,6 @@ int main(){
             }
             
         }
-
         break;
     }
     
