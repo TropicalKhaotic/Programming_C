@@ -2,9 +2,6 @@
 #include<stdlib.h>
 #include<time.h>
 
-
-
-
     int main () {
         int num = 0;
         int test = 0;
@@ -37,7 +34,7 @@
                         break; 
                 }
             }
-            
+
             if (count > 10) {
                 printf("Tente novamente");
                 return 0;
