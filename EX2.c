@@ -29,7 +29,6 @@
     int main () {
 
         int num_input = 0;
-
         printf("Insira um numero a ser calculado: ");
         scanf("%d", &num_input);
         printf("O numero primo mais alto é: %d", prime_calculation(num_input));
