@@ -1,36 +1,26 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include <stdbool.h>
 
-int main(){
+
     // Fazer um programa para encontrar todos os pares de números amigáveis entre 1 e 100000.
-    //Um par de números é amigável quando cada um deles é igual à soma dos divisores do outro. 
+    // Um par de números é amigável quando cada um deles é igual à soma dos divisores do outro. 
 
-    int num = 0;
-    int division = 0;
-    int num_dividend = 0;
-
-    for (num = 1; num <= 100000; num++) {
-        for (int num_division = 1; num_division < num; num_division++) {
-            if (num % num_division == 0) {
-                division += num_division;
-            } 
+    int sum_of_divisors(int num) {
+        int sum = 0;
+        for ( int divisor = 1; divisor <= num / 2; divisor++) {
+            if ( num % divisor == 0 ) {
+                sum += divisor;
+            }
         }
 
-        for (int num_division = 1; num_division <= num; num_division++) {
-            if (division % num_division == 0) {
-                num_dividend += num_division;
-            } 
-        }
+        return sum;
+    }
 
-        if ( num_dividend == num) {
-            printf("São amigaveis os numeros %d e %d\n", division, num_dividend);
-        } 
-        
-        if ( num_dividend != num) {
-            division = 0;
-            num_dividend = 0;
+    int main(){
+        for ( int test = 1; test <= 100000; test++) {
+            int calculo = sum_of_divisors(test);
+            if (calculo > test && sum_of_divisors(calculo) == test) {
+                printf("Os numeros são amigaveis: %d e %d\n", test, calculo);
+            }
         }
     }
-    return 0;
-}
