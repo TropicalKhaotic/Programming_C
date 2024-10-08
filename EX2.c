@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
     int MMC_calculator(int num, int num_2) {
         int num_rest = 0;
         int num_rest2 = 0;
